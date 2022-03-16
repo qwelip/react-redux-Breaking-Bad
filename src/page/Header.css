@@ -1,0 +1,19 @@
+.header {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  width: 90px;
+  height: 90px;
+  margin-right: 18px;
+}
+
+.header__caption {
+  color: #ABB6C2;
+  display: inline-block;
+  font-size: 22px;
+  margin: 16px 0;
+}

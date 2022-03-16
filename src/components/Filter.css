@@ -1,0 +1,17 @@
+.filter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #4C9BE8;
+  border-radius: 6px;
+  padding: 20px 15px;
+  color: white;
+  box-sizing: border-box;
+}
+
+.filter__button {
+  position: absolute;
+  bottom: -44px;
+  right: 0;
+}
