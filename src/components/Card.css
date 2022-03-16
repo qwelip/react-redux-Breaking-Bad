@@ -9,6 +9,7 @@
 
 .card__img {
   width: 100%;
+  min-height: 210px;
   max-height: 210px;
   object-fit: cover;
   object-position: top;
@@ -27,11 +28,15 @@
 .card__first-text {
   font-size: 16px;
   margin-right: 4px;
+  flex: 0 0 auto;
 }
 
 .card__sec-text {
   font-size: 16px;
   font-weight: lighter;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .card__separator {

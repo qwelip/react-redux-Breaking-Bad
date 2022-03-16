@@ -1,7 +1,7 @@
 import React from 'react';
 import './Button.css';
 
-const Button = ({bgColor, caption, handleClick}) => {
+const Button = ({bgColor, caption, handleClick, isActive}) => {
   return (
     <button 
       className='button' 
@@ -12,5 +12,9 @@ const Button = ({bgColor, caption, handleClick}) => {
     </button>
   );
 };
+
+Button.defaultProps = {
+  isActive: true
+}
 
 export default Button;
