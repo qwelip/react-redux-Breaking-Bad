@@ -1,6 +1,6 @@
-import Header from './page/Header';
-import Main from './page/Main';
-import Footer from './page/Footer';
+import Header from './page/Header/Header';
+import Main from './page/Main/Main';
+import Footer from './page/Footer//Footer';
 
 function App() {
   return (

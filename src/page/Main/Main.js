@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Filter from '../components/Filter/Filter';
-import List from '../components/List/List';
-import Card from '../components/Card/Card';
-import { getAllCaracters } from '../store/caracters/caracters-action';
-import { caractersSelector } from '../store/caracters/caracters-selector';
-import { allFilterSelector } from '../store/filter/filter-selector';
+import Filter from '../../components/Filter/Filter';
+import List from '../../components/List/List';
+import Card from '../../components/Card/Card';
+import { getAllCaracters } from '../../store/caracters/caracters-action';
+import { caractersSelector } from '../../store/caracters/caracters-selector';
+import { allFilterSelector } from '../../store/filter/filter-selector';
 import './Main.css';
 
 
