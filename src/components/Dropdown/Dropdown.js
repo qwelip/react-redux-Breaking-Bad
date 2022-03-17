@@ -1,9 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { statusSelector } from '../store/filter/filter-selector';
-import { dropdownStateSelector } from '../store/filter/filter-selector';
-import { setStatus } from '../store/filter/filter-action';
-import { setDropdownState } from '../store/filter/filter-action';
+import { statusSelector } from '../../store/filter/filter-selector';
+import { dropdownStateSelector } from '../../store/filter/filter-selector';
+import { setStatus } from '../../store/filter/filter-action';
+import { setDropdownState } from '../../store/filter/filter-action';
 import './Dropdown.css';
 
 const Dropdown = () => {

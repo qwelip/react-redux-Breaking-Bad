@@ -1,6 +1,6 @@
 import React from 'react';
+import Button from '../Button/Button';
 import './Card.css';
-import Button from './Button';
 
 const Card = ({
   img,

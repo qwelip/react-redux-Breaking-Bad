@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { episodesSelector } from '../store/filter/filter-selector';
-import { setEpisodes } from '../store/filter/filter-action';
+import { episodesSelector } from '../../store/filter/filter-selector';
+import { setEpisodes } from '../../store/filter/filter-action';
 import './Checkboxes.css';
 
 const Checkboxes = () => {

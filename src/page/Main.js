@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import './Main.css';
-import Filter from '../components/Filter';
-import List from '../components/List';
-import Card from '../components/Card';
-import { getAllCaracters } from '../store/caracters/caracters-action';
 import { useDispatch, useSelector } from 'react-redux';
+import Filter from '../components/Filter/Filter';
+import List from '../components/List/List';
+import Card from '../components/Card/Card';
+import { getAllCaracters } from '../store/caracters/caracters-action';
 import { caractersSelector } from '../store/caracters/caracters-selector';
 import { allFilterSelector } from '../store/filter/filter-selector';
+import './Main.css';
 
 
 const Main = () => {

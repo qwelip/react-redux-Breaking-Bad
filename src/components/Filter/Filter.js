@@ -1,12 +1,12 @@
 import React from 'react';
-import './Filter.css';
-import Search from './Search';
-import Dropdown from './Dropdown';
-import Checkboxes from './Checkboxes';
-import Button from './Button';
-import { resetFilter } from '../store/filter/filter-action';
 import { useDispatch, useSelector } from 'react-redux';
-import { allFilterSelector } from '../store/filter/filter-selector';
+import Search from '../Search/Search';
+import Dropdown from '../Dropdown/Dropdown';
+import Checkboxes from '../Checkboxes/Checkboxes';
+import Button from '../Button/Button';
+import { resetFilter } from '../../store/filter/filter-action';
+import { allFilterSelector } from '../../store/filter/filter-selector';
+import './Filter.css';
 
 const Filter = () => {
 

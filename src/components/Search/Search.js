@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setInput } from '../store/filter/filter-action';
-import { inputSelector } from '../store/filter/filter-selector';
+import { setInput } from '../../store/filter/filter-action';
+import { inputSelector } from '../../store/filter/filter-selector';
 import './Search.css';
 
 const Search = () => {
