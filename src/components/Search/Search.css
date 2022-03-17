@@ -3,10 +3,23 @@
   border-radius: 6px;
   overflow: hidden;
   margin-right: 20px;
-  flex: 1 1 140px;
+  flex: 0 0 180px;
   padding: 8px 0 8px 12px;
+}
+
+@media (max-width: 379px) {
+  .search {
+    flex: 1 1 180px;
+  }
+}
+
+@media (max-width: 348px) {
+  .search {
+    margin-right: 0;
+  }
 }
 
 .search__input {
   width: 100%;
+  font-size: 14px;
 }

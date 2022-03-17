@@ -2,12 +2,32 @@
   display: flex;
   position: relative;
   flex: 1 0 auto;
+  margin: 0;
+}
+
+@media (max-width: 859px) {
+  .dropdown {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 379px) {
+  .dropdown {
+    flex: 0 0 auto;
+    margin-top: 20px;
+  }
 }
 
 .dropdown__caption {
   cursor: pointer;
   font-size: 22px;
   transition: 0.1s all ease-in;
+}
+
+@media (max-width: 834px) {
+  .dropdown__caption {
+    font-size: 20px;
+  }
 }
 
 .dropdown__icon {
@@ -20,6 +40,10 @@
   top: 27px;
   left: 0;
   font-size: 12px;
+  white-space: nowrap;
+  background-color: #ABB6C2;
+  padding: 2px 5px;
+  border-radius: 6px;
 }
 
 .dropdown__icon:hover,

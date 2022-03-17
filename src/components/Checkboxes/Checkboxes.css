@@ -1,11 +1,38 @@
 .checkboxes {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 859px) {
+  .checkboxes {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 379px) {
+  .checkboxes {
+    margin-top: 28px;
+    justify-content: center;
+  }
 }
 
 .checkboxes__caption {
   font-size: 22px;
   margin-right: 10px;
+}
+
+@media (max-width: 834px) {
+  .checkboxes__caption {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 538px) {
+  .checkboxes__inputs {
+    margin-top: 15px;
+  }
 }
 
 .custom-checkbox {
@@ -19,6 +46,12 @@ label {
   align-items: center;
   user-select: none;
   font-size: 20px;
+}
+
+@media (max-width: 870px) {
+  .label {
+    font-size: 16px;
+  }
 }
 
 label::after {
