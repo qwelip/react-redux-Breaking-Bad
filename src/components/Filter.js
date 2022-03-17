@@ -5,10 +5,12 @@ import Dropdown from './Dropdown';
 import Checkboxes from './Checkboxes';
 import Button from './Button';
 import { resetFilter } from '../store/filter/filter-action';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { allFilterSelector } from '../store/filter/filter-selector';
 
 const Filter = () => {
 
+  const filter = useSelector(state => allFilterSelector(state));
   const dispatch = useDispatch();
 
   return (
@@ -21,7 +23,7 @@ const Filter = () => {
           caption='Clear filter'
           bgColor='#D9534F'
           handleClick={() => dispatch(resetFilter())}
-          // isActive={}
+          isActive={ !!filter.input || filter.status !== 'All' || filter.episodes.length !== 0 }
         />
       </div>
     </div>

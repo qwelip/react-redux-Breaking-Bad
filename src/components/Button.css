@@ -4,8 +4,11 @@
   border-radius: 6px;
   border: none;
   padding: 8px 30px;
-  cursor: pointer;
   transition: all 0.1s ease-in;
+}
+
+.button:disabled {
+  background-color: #20374C !important;
 }
 
 .button:hover {
