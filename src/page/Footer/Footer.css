@@ -1,0 +1,43 @@
+.footer {
+  width: 100%;
+  background-color: #20374C;
+  margin-top: 30px;
+  color: white;
+}
+
+.footer__content {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.footer__header {
+  margin: 0;
+  padding: 20px 0 30px 0;
+  font-size: 25px;
+}
+
+.footer__text {
+  font-weight: lighter;
+  padding-top: 10px;
+}
+
+.footer__link-text {
+  margin-left: 10px;
+}
+
+.footer__link {
+  display: inline-flex;
+  text-decoration: none;
+  color: #FFC107;
+  align-items: center;
+  margin-top: 10px;
+  margin: 0;
+  padding: 20px 0;
+  cursor: pointer;
+  transition: all 0.1 ease-in;
+}
+
+.footer__link:hover {
+  opacity: 0.5;
+}
+
