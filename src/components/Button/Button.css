@@ -5,6 +5,7 @@
   border: none;
   padding: 8px 30px;
   transition: all 0.1s ease-in;
+  white-space: nowrap;
 }
 
 .button:disabled {

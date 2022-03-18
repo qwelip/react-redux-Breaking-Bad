@@ -17,6 +17,7 @@ const Main = () => {
 
   useEffect(() => {
     dispatch(getAllCaracters())
+    // todo сделать чтобы информация загружалась только раз
   }, [])
 
   return (

@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 import './Card.css';
 
 const Card = ({
@@ -8,6 +9,8 @@ const Card = ({
   nickname,
   status
 }) => {
+  const nameToSearch = name.split(' ').join('+')
+
   return (
     <div className='card'>
       <img className='card__img' src={img} alt="" />
@@ -27,10 +30,12 @@ const Card = ({
       </div>
         <div className="card__separator"></div>
         <div className='card__button'>
-          <Button
-            caption='Details'
-            bgColor='#5CB85C'
-          />
+          <Link to={`/caracter/${nameToSearch}`}>
+            <Button
+              caption='Details'
+              bgColor='#5CB85C'
+            />
+          </Link>
         </div>
     </div>
   );

@@ -13,6 +13,8 @@ const setCaracters = (array) => ({
   payload: array
 })
 
+// добавить добавление в стор стейта ошибки и обновление статуса загрузки
+
 export const getAllCaracters = () => (dispatch) => {
   dispatch(setLoading());
   fetch(getAllCaractersUrl)
