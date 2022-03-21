@@ -15,7 +15,7 @@ const Button = ({bgColor, caption, handleClick, isActive}) => {
 };
 
 Button.defaultProps = {
-  isActive: true
+  isActive: false
 }
 
 export default Button;

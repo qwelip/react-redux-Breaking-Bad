@@ -34,6 +34,7 @@ const Card = ({
             <Button
               caption='Details'
               bgColor='#5CB85C'
+              isActive={true}
             />
           </Link>
         </div>

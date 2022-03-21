@@ -37,18 +37,22 @@ const setNextCaracter = (name) => ({
 
 // todo добавить добавление в стор стейта ошибки и обновление статуса загрузки
 
-export const getDetails = (name) => (dispatch) => {
+export const getDetails = (name) => async (dispatch) => {
   dispatch(setLoading());
-  fetch(`${getCaracterUrl}${name}`)
-    .then(res => res.json())
-    .then(data => dispatch(setDetails(data)))
-    .catch(err => console.log(`${err} Can't fetch data`))
+
+  const caracter = await fetch(`${getCaracterUrl}${name}`);
+  const caracterRes = await caracter.json()
+  dispatch(setDetails(caracterRes))
+
+  const nextCaracter = await fetch(`${getCaracterByIdUrl}${caracterRes[0].char_id + 1}`);
+  const nextCaracterRes = await nextCaracter.json();
+  nextCaracterRes[0] && dispatch(setNextCaracter(nextCaracterRes[0].name))
 }
 
 export const getQuote = (name) => (dispatch) => {
   fetch(`${getRandomCaracterQuoteUrl}${name}`)
     .then(res => res.json())
-    .then(data => dispatch(setQuote(data[0].quote)))
+    .then(data => {data[0] && dispatch(setQuote(data[0].quote))})
     .catch(err => {
       console.log(`${err} Can't fetch data`);
       dispatch(setQuote('none'))
@@ -61,10 +65,3 @@ export const getDeathDetails = (name) => async (dispatch) => {
     .then(data => dispatch(setDeathDetails(data[0])))
     .catch(err => console.log(`${err} Can't fetch data`))
 }
-
-// export const getCaracterById = (id) => (dispatch) => {
-//   fetch(`${getCaracterByIdUrl}/${id}`)
-//     .then(res => res.json())
-//     .then(data => dispatch(setNextCaracter(data)))
-//     .catch(err => console.log(`${err} Can't fetch data`))
-// }

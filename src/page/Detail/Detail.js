@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import Tag from '../../components/Tag/Tag';
 import Button from '../../components/Button/Button';
-import { getDetails, getQuote, getDeathDetails, resetDetails, getCaracterById } from '../../store/details/details-action';
+import { getDetails, getQuote, getDeathDetails, resetDetails } from '../../store/details/details-action';
 import { infoSelector, detailsSelector } from '../../store/details/details-selector';
 import './Detail.css';
 
@@ -13,7 +13,7 @@ const Detail = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const info = useSelector(state => infoSelector(state));
-  const {quote, deathDetails} = useSelector(state => detailsSelector(state));
+  const {quote, deathDetails, nextCaracter} = useSelector(state => detailsSelector(state));
 
 
   const handleClick = () => {
@@ -24,12 +24,11 @@ const Detail = () => {
     dispatch(getDetails(name));
     dispatch(getDeathDetails(name));
     dispatch(getQuote(name));
-    // dispatch(getCaracterById(info.char_id + 1));
 
     return () => {
       dispatch(resetDetails());
     }
-  }, [])
+  }, [name])
 
   return (
     <section className='detail'>
@@ -38,11 +37,18 @@ const Detail = () => {
           bgColor='#5CB85C'
           caption='Back'
           handleClick={() => navigate(-1)}
+          isActive={true}
         />
-        <Button
-          bgColor='#5CB85C'
-          caption='Walter White'
-        />
+        {
+          nextCaracter &&
+          <Link to={`/caracter/${nextCaracter.split(' ').join('+')}`}>
+            <Button
+              bgColor='#5CB85C'
+              caption={`Next: ${nextCaracter}`}
+              isActive={true}
+            />
+          </Link>
+        }
       </div>
       {info &&
         <section>
@@ -106,7 +112,7 @@ const Detail = () => {
                   bgColor='#FFC107'
                   caption='Get quote'
                   handleClick={handleClick}
-                  isActive={quote !== 'none'}
+                  isActive={quote !== ''}
                 />
                 {
                   (quote && quote !== 'none') &&
