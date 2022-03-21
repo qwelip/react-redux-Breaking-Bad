@@ -8,6 +8,12 @@
   white-space: nowrap;
 }
 
+@media (max-width: 450px) {
+  .button {
+    padding: 4px 15px;
+  }
+}
+
 .button:disabled {
   background-color: #20374C !important;
 }

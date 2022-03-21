@@ -23,10 +23,17 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 1 1 auto;
 }
 
 .detail__flex-column:first-child {
   margin-right: 50px;
+}
+
+@media (max-width: 660px) {
+  .detail__flex-column:first-child {
+    margin: 0 0 20px 0;
+  }
 }
 
 .detail__flex-column_last {
@@ -39,9 +46,16 @@
   margin-top: 40px;
 }
 
+@media (max-width: 660px) {
+  .detail__content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .detail__img-wrapper {
   max-width: 480px;
-  min-width: 315px;
+  min-width: 200px;
   min-height: 200px;
   max-height: 400px;
   overflow: hidden;
@@ -66,21 +80,62 @@
   font-weight: lighter;
 }
 
+@media (max-width: 660px) {
+  .detail__img-description {
+    bottom: 0;
+    top: -20px;
+  }
+}
+
 .detail__header {
   display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 660px) {
+  .detail__header {
+    margin-bottom: 20px;
+  }
 }
 
 .detail__info {
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   margin-right: 40px;
+}
+
+@media (max-width: 660px) {
+  .detail__info {
+    margin-right: 0;
+  }
 }
 
 .detail__title {
   font-size: 42px;
+  margin-right: 15px;
+}
+
+@media (max-width: 750px) {
+  .detail__title {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 580px) {
+  .detail__title {
+    font-size: 25px;
+  }
 }
 
 .detail__header-description {
   font-weight: lighter;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 660px) {
+  .detail__header-description {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
 }
 
 .detail__tags {
@@ -88,6 +143,12 @@
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 6px;
+}
+
+@media (max-width: 660px) {
+  .detail__tags {
+    margin-bottom: 30px;
+  }
 }
 
 .detail__death {
@@ -99,18 +160,38 @@
 }
 
 .detail__text1 {
-  min-width: 120px;
+  min-width: 90px;
   font-weight: bold;
+  margin-right: 8px;
 }
 
 .detail__text2 {
   font-weight: lighter;
 }
 
+@media (max-width: 380px) {
+  .detail__text2, .detail__text1 {
+    font-size: 14px;
+  }
+}
+
 .detail__quote {
   position: relative;
   display: flex;
   align-items: flex-end;
+}
+
+@media (max-width: 600px) {
+  .detail__quote {
+    margin: 30px 0 0 0;
+  }
+}
+
+@media (max-width: 660px) {
+  .detail__quote {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .detail__qoute-box {
@@ -121,6 +202,15 @@
   border: solid rgba(255, 255, 255, 0.3) 1px;
   padding: 8px 10px;
   margin-left: 20px;
+}
+
+@media (max-width: 660px) {
+  .detail__qoute-box {
+    position: static;
+    top: 0;
+    left: 120px;
+    margin: 20px 0 0 0;
+  }
 }
 
 

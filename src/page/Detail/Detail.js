@@ -51,9 +51,7 @@ const Detail = () => {
         }
       </div>
       {info &&
-        <section>
-    
-          <div className="detail__content">
+        <section className="detail__content">
     
             <div className="detail__flex-column">
               <div className="detail__img-wrapper">
@@ -123,7 +121,6 @@ const Detail = () => {
               </div>
     
             </div>
-          </div>
         </section>
       }
     </section>

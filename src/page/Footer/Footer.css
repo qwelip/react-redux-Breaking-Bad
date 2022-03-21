@@ -6,14 +6,21 @@
 }
 
 .footer__content {
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .footer__header {
   margin: 0;
-  padding: 20px 0 30px 0;
+  padding: 30px 0 10px 0;
   font-size: 25px;
+}
+
+@media (max-width: 500px) {
+  .footer__header {
+    font-size: 20px;
+  }
 }
 
 .footer__text {
