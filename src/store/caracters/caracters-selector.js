@@ -8,3 +8,5 @@ export const caractersSelector = (state, filter) => {
             (episodesStr ? caracter.appearance.join('') === episodesStr : true)
   })
 };
+
+export const caractersLoadingSelector = (state) => state.caracters.loading;

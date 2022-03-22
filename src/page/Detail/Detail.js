@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Tag from '../../components/Tag/Tag';
 import Button from '../../components/Button/Button';
+import Loader from '../../components/Loader/Loader';
 import { getDetails, getQuote, getDeathDetails, resetDetails } from '../../store/details/details-action';
 import { infoSelector, detailsSelector } from '../../store/details/details-selector';
 import './Detail.css';
@@ -13,7 +14,7 @@ const Detail = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const info = useSelector(state => infoSelector(state));
-  const {quote, deathDetails, nextCaracter} = useSelector(state => detailsSelector(state));
+  const {quote, deathDetails, nextCaracter, loading} = useSelector(state => detailsSelector(state));
 
 
   const handleClick = () => {
@@ -32,25 +33,35 @@ const Detail = () => {
 
   return (
     <section className='detail'>
-      <div className="detail__buttons">
-        <Button
-          bgColor='#5CB85C'
-          caption='Back'
-          handleClick={() => navigate(-1)}
-          isActive={true}
-        />
-        {
-          nextCaracter &&
-          <Link to={`/caracter/${nextCaracter.split(' ').join('+')}`}>
-            <Button
-              bgColor='#5CB85C'
-              caption={`Next: ${nextCaracter}`}
-              isActive={true}
-            />
-          </Link>
-        }
-      </div>
-      {info &&
+
+      {
+        loading ?
+        <Loader/> :
+        
+        <div className="detail__buttons">
+          <Button
+            bgColor='#5CB85C'
+            caption='Back'
+            handleClick={() => navigate(-1)}
+            isActive={true}
+          />
+          {
+            nextCaracter &&
+            <Link to={`/caracter/${nextCaracter.split(' ').join('+')}`}>
+              <Button
+                bgColor='#5CB85C'
+                caption={`Next: ${nextCaracter}`}
+                isActive={true}
+              />
+            </Link>
+          }
+        </div>
+      }
+
+      
+      
+      {
+        info &&
         <section className="detail__content">
     
             <div className="detail__flex-column">
@@ -107,7 +118,7 @@ const Detail = () => {
     
               <div className="detail__quote">
                 <Button
-                  bgColor='#FFC107'
+                  bgColor='#5CB85C'
                   caption='Get quote'
                   handleClick={handleClick}
                   isActive={quote !== ''}
