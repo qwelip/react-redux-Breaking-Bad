@@ -8,7 +8,7 @@ import { store } from './store';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/react-redux-Breaking-Bad'>
       <Provider store={store}>
         <App />
       </Provider>

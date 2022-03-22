@@ -1,5 +1,6 @@
 {
   "name": "7-breaking-bad-api-proj",
+  "homepage": "https://qwelip.github.io/react-redux-Breaking-Bad",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
