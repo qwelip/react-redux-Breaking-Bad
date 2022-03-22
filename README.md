@@ -1,4 +1,4 @@
-# Проект: Breaking Bad App (пока не работает)
+# Проект: Breaking Bad App
 ### О проекте
 
 Создан на основе бесплатного The Breaking Bad API 
