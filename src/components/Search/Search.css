@@ -13,6 +13,18 @@
   }
 }
 
+@media (max-width: 375px) {
+  .search {
+    padding: 8px 0 8px 8px;
+  }
+}
+
+@media (max-width: 368px) {
+  .search {
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 348px) {
   .search {
     margin-right: 0;
