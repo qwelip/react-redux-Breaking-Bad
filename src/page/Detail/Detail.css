@@ -2,7 +2,7 @@
   max-width: 1000px;
   color: white;
   margin: 0 auto;
-  min-height: calc(100vh - 202px - 90px);
+  min-height: calc(100vh - 265px);
 }
 
 @media (max-width: 1015px) {
