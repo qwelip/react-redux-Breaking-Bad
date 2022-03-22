@@ -8,6 +8,7 @@
   border-radius: 6px;
   white-space: nowrap;
   filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.9));
+  margin-bottom: 6px;
 }
 
 .tag:not(:last-child) {

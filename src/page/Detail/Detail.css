@@ -142,12 +142,11 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: 6px;
 }
 
 @media (max-width: 660px) {
   .detail__tags {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
   }
 }
 
