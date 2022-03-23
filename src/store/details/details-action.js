@@ -35,8 +35,6 @@ const setNextCaracter = (name) => ({
   payload: name
 })
 
-// todo добавить добавление в стор стейта ошибки и обновление статуса загрузки
-
 export const getDetails = (name) => async (dispatch) => {
   dispatch(setLoading());
 

@@ -1,4 +1,11 @@
-import { SET_DETAILS, SET_LOADING, SET_QUOTE, SET_DEATH_DETAILS, RESET_DETAILS, SET_NEXT_CARACTER } from "./details-action";
+import { 
+  SET_DETAILS, 
+  SET_LOADING, 
+  SET_QUOTE, 
+  SET_DEATH_DETAILS, 
+  RESET_DETAILS, 
+  SET_NEXT_CARACTER 
+} from "./details-action";
 
 const initialState = {
   details: {},

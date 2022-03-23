@@ -9,4 +9,7 @@ export const caractersSelector = (state, filter) => {
   })
 };
 
-export const caractersLoadingSelector = (state) => state.caracters.loading;
+export const caractersInfoSelector = (state => ({
+  loading: state.caracters.loading,
+  qty: state.caracters.caracters.length
+}))
