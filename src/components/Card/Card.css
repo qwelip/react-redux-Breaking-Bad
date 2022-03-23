@@ -17,6 +17,7 @@
   min-height: 210px;
   max-height: 195px;
   min-width: 143px;
+  max-width: 100%;
   overflow: hidden;
 }
 
