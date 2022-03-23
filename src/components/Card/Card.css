@@ -13,19 +13,18 @@
   }
 }
 
-.card__img {
-  width: 100%;
-  min-width: 147px;
+.card__img-wrapper {
   min-height: 210px;
-  max-height: 210px;
-  object-fit: cover;
-  object-position: top;
+  max-height: 195px;
+  min-width: 143px;
+  overflow: hidden;
 }
 
-@media (max-width: 470px) {
-  .card__img {
-    object-fit: unset;
-  }
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
 .card__details {

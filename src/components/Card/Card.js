@@ -13,7 +13,9 @@ const Card = ({
 
   return (
     <div className='card'>
-      <img className='card__img' src={img} alt="" />
+      <div className="card__img-wrapper">
+        <img className='card__img' src={img} alt={name} />
+      </div>
       <div className="card__details">
         <div className="card__info">
           <p className='card__first-text'>Name -</p>
